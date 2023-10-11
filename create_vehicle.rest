@@ -1,0 +1,18 @@
+POST http://localhost:3003/api/example 
+Content-Type: application/json
+
+{
+  "name": "car",
+  "type": "land",
+  "numberWheels": 4
+}
+
+###
+
+POST http://localhost:3003/api/example
+Content-Type: application/json
+
+{
+  "name": "helicopter",
+  "type": "air"
+}
