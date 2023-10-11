@@ -4,9 +4,13 @@
   "description": "Starting point for a project with Node.js in the backend, React in the frontend, and PostgreSQL database",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "NODE_ENV=production node server/index.js",
+    "dev:client": "NODE_ENV=development cd client && vite",
     "dev:server": "NODE_ENV=development nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:client": "cd client && vite build && cp -r dist ../server",
+    "lint": "cd client && eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "cd client && vite preview"
   },
   "author": "Ricardo Joaquinito",
   "license": "ISC",
@@ -17,9 +21,19 @@
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sequelize": "^6.33.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "nodemon": "^3.0.1",
+    "vite": "^4.4.11"
   }
 }
