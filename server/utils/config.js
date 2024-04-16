@@ -1,9 +1,9 @@
 require('dotenv').config()
 
 const PORT = process.env.PORT
-const ELEPHANTSQL_URL =  process.env.ELEPHANTSQL_URL
+const POSTGRESQL_DB_URL =  process.env.NEON_DB_URL
 
 module.exports = {
     PORT,
-    ELEPHANTSQL_URL
+    POSTGRESQL_DB_URL
 }

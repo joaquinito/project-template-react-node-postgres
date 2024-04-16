@@ -3,7 +3,7 @@
 This template contains:
 * a backend (folder 'server') running on Node.js
 * a frontend (folder 'client') based on the React library, started with Vite
-* a PostgreSQL database hosted in the ElephantSQL cloud service
+* a PostgreSQL database hosted in a cloud service
 
 The package.json is shared by both backend and frontend.
 
@@ -23,4 +23,4 @@ Development dependencies: `nodemon`,
 
 A .env file is required in the root folder, containing the following variables:
 * `PORT`: the port on which the server will run
-* `ELEPHANSQL_URL`: the URL for the PostgreSQL database hosted in ElephantSQL
+* `POSTGRESQL_DB_URL`: the URL for the PostgreSQL database

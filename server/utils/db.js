@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
-const { ELEPHANTSQL_URL } = require('./config')
+const { POSTGRESQL_DB_URL } = require('./config')
 
-const sequelize = new Sequelize(ELEPHANTSQL_URL, {
+const sequelize = new Sequelize, {
   dialectOptions: {    
     ssl: {      
       require: true,      
